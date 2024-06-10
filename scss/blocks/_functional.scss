@@ -1,0 +1,28 @@
+.functional {
+    display: flex;
+    gap: 270px;
+    
+    &__img {
+        display: flex;
+        width: 487px;
+        height: 500px;
+    }
+}
+
+.functional-list {
+    max-width: 486px;
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        padding: 20px;
+        min-height: 120px;
+        font-size: 18px;
+        border-top: 1px solid $accent-color; 
+
+        &:last-child {
+            border-bottom: 1px solid $accent-color;
+        }
+    }
+
+}

@@ -1,14 +1,276 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Генератор смет</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <header class="header">
-        <h1>header</h1>
+        <div class="container">
+            <div class="header__wrapper">
+                <a href="/" class="logo">
+                    <img src="" alt="">
+                </a>
+                <nav>
+                    <ul class="menu">
+                        <li class="menu__item"><a href="" class="menu__link">В разработке</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Возможности</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Кому полезен сервис</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                    </ul>
+                </nav>
+                <div class="header__btns">
+                    <button class="btn btn--signIn">Войти</button>
+                    <button class="btn btn--yellow btn--signUp">Регистрация</button>
+                </div>
+            </div>
+        </div>
     </header>
+    <main>
+        <!-- баннер -->
+
+        <!-- возможности -->
+        <section class="section">
+            <div class="container">
+                <div class="top">
+                    <h2>Возможности</h2>
+                    <div class="top__description">
+                        <div class="message">
+                            <p class="message__title">Алексей Блинов, основатель</p>
+                            <p class="message__description">На объекте может возникать много проблем: неправильно оценённая работа, поджимающие сроки, разногласия с заказчиками. Решение — правильно составленная смета. В нашем сервисе есть функции, которые помогут свести количество проблем к минимуму</p>
+                        </div>
+                        <img src="" class="top__img" alt="">
+                    </div>
+                </div>
+                <div class="container__inner">
+                    <div class="possibilities">
+                        <div class="possibilities__item ">
+                            <div class="possibilities__top">
+                                <p class="possibilities__title">Различные способы составления смет</p>
+                            </div>
+                            <div class="possibilities__description">
+                                <ul class="possibilities-list">
+                                    <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
+                                    <li>График работ поможет удобно выставить сроки заказа.</li>
+                                    <li>Акты выполненных работ в одном месте, просто укажите необходимые работы и отправляйте на согласование.</li>
+                                </ul>
+                            </div>
+                            <div class="possibilities__bottom">
+                                <img src="" alt="">
+                                <span class="possibilities__counter">01.</span>
+                            </div>
+                        </div>
+                        <div class="possibilities__item ">
+                            <div class="possibilities__top">
+                                <p class="possibilities__title">Все необходимые документы</p>
+                            </div>
+                            <div class="possibilities__description">
+                                <ul class="possibilities-list">
+                                    <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
+                                    <li>График работ поможет удобно выставить сроки заказа.</li>
+                                    <li>Акты выполненных работ в одном месте, просто укажите необходимые работы и отправляйте на согласование.</li>
+                                </ul>
+                            </div>
+                            <div class="possibilities__bottom">
+                                <img src="" alt="">
+                                <span class="possibilities__counter">02.</span>
+                            </div>
+                        </div>
+                        <div class="possibilities__item ">
+                            <div class="possibilities__top">
+                                <p class="possibilities__title">ведение Объектов</p>
+                            </div>
+                            <div class="possibilities__description">
+                                <ul class="possibilities-list">
+                                    <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
+                                    <li>График работ поможет удобно выставить сроки заказа.</li>
+                                    <li>Акты выполненных работ в одном месте, просто укажите необходимые работы и отправляйте на согласование.</li>
+                                </ul>
+                            </div>
+                            <div class="possibilities__bottom">
+                                <img src="" alt="">
+                                <span class="possibilities__counter">03.</span>
+                            </div>
+                        </div>
+                        <div class="possibilities__item ">
+                            <div class="possibilities__top">
+                                <p class="possibilities__title">полезная Статистика</p>
+                            </div>
+                            <div class="possibilities__description">
+                                <ul class="possibilities-list">
+                                    <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
+                                    <li>График работ поможет удобно выставить сроки заказа.</li>
+                                    <li>Акты выполненных работ в одном месте, просто укажите необходимые работы и отправляйте на согласование.</li>
+                                </ul>
+                            </div>
+                            <div class="possibilities__bottom">
+                                <img src="" alt="">
+                                <span class="possibilities__counter">04.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- попробовать -->
+        <section class="section">
+            <div class="try">
+                <div class="try__wrapper">
+                    <p class="try__title">Создано строителями для строителей</p>
+                    <button class="btn btn--yellow btn--try">Попробовать</button>
+                </div>
+            </div>
+        </section>
+        <!-- функционал -->
+        <section class="section">
+            <div class="container">
+                <h2>Функционал для работы со сметами</h2>
+                <div class="container__inner">
+                    <div class="functional">
+                        <img src="" alt="" class="functional__img">
+                        <ul class="functional-list">
+                            <li class="functional-list__item">
+                                Группирование смет по порядку ведения работ на объекте, разделять по разным видам работ или по разным комнатам
+                            </li>
+                            <li class="functional-list__item">
+                                Включение материалов в стоимость работ и обратно
+                            </li>
+                            <li class="functional-list__item">
+                                Подстраивание смет под нужную расценку за 1 м² или сумму
+                            </li>
+                            <li class="functional-list__item">
+                                Применение разных цен на работы исходя из сложности объекта или возможностей заказчика.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- польза -->
+        <section class="section">
+            <div class="container">
+                <div class="top">
+                    <h2>Кому полезен сервис</h2>
+                    <div class="top__description">
+                        <div class="message">
+                            <p class="message__title">Алексей Блинов, основатель</p>
+                            <p class="message__description">Наш сервис рассчитан на любого пользователя, независимо от его опыта работы, потому что наша цель — показать, что создавать сметы и вести документацию — это легко и удобно.</p>
+                        </div>
+                        <img src="" class="top__img" alt="">
+                    </div>
+                </div>
+                <div class="container__inner">
+                    <div class="benefit">
+                        <a href="#" class="benefit__item">
+                            <div class="benefit__hidden">
+                                <img src="" class="benefit__img" alt="">
+                                <div class="benefit__description">
+                                    <p class="benefit__text">
+                                        Поставки материала на объект не проблема? Тогда подключиться к нашему сервису вы просто обязаны, так как только здесь вы сможет оперативно создавать все расчеты и документы, необходимые для ведения объекта, а сервис подберет оптимального поставщика материалов и не даст вам ошибиться с расчетами.
+                                    </p>
+                                    <img src="" class="benefit__icon" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit__bottom">
+                                <div class="benefit__title">Частный мастер по ремонту</div>
+                                <img src="" class="benefit__icon" alt="">
+                            </div>
+                        </a>
+                        <a href="#" class="benefit__item">
+                            <div class="benefit__hidden">
+                                <img src="" class="benefit__img" alt="">
+                                <div class="benefit__description">
+                                    <p class="benefit__text">
+                                        Поставки материала на объект не проблема? Тогда подключиться к нашему сервису вы просто обязаны, так как только здесь вы сможет оперативно создавать все расчеты и документы, необходимые для ведения объекта, а сервис подберет оптимального поставщика материалов и не даст вам ошибиться с расчетами.
+                                    </p>
+                                    <img src="" class="benefit__icon" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit__bottom">
+                                <div class="benefit__title">Бригада</div>
+                                <img src="" class="benefit__icon" alt="">
+                            </div>
+                        </a>
+                        <a href="#" class="benefit__item">
+                            <div class="benefit__hidden">
+                                <img src="" class="benefit__img" alt="">
+                                <div class="benefit__description">
+                                    <p class="benefit__text">
+                                        Поставки материала на объект не проблема? Тогда подключиться к нашему сервису вы просто обязаны, так как только здесь вы сможет оперативно создавать все расчеты и документы, необходимые для ведения объекта, а сервис подберет оптимального поставщика материалов и не даст вам ошибиться с расчетами.
+                                    </p>
+                                    <img src="" class="benefit__icon" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit__bottom">
+                                <div class="benefit__title">Дизайн - студия или просто дизайнер</div>
+                                <img src="" class="benefit__icon" alt="">
+                            </div>
+                        </a>
+                        <a href="#" class="benefit__item">
+                            <div class="benefit__hidden">
+                                <img src="" class="benefit__img" alt="">
+                                <div class="benefit__description">
+                                    <p class="benefit__text">
+                                        Поставки материала на объект не проблема? Тогда подключиться к нашему сервису вы просто обязаны, так как только здесь вы сможет оперативно создавать все расчеты и документы, необходимые для ведения объекта, а сервис подберет оптимального поставщика материалов и не даст вам ошибиться с расчетами.
+                                    </p>
+                                    <img src="" class="benefit__icon" alt="">
+                                </div>
+                            </div>
+                            <div class="benefit__bottom">
+                                <div class="benefit__title">Большая ремонтная компания</div>
+                                <img src="" class="benefit__icon" alt="">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__wrapper">
+                    <div class="footer-form">
+                        <p class="footer-form__title">Остались вопросы?</p>
+                        <p class="footer-form__subtitle">Задайте его ниже и я отвечу на него в ближайшее время</p>
+                        <form action="#" method="POST" class="form">
+                            <input type="text" name="name" class="input" placeholder="Ваше имя">
+                            <input type="tel" name="phone" class="input" placeholder="Ваш телефон">
+                            <input type="email" name="email" class="input" placeholder="Почта">
+                            <input type="text" name="msg" class="input" placeholder="Ваш вопрос">
+                            <button class="btn btn--yellow btn--form" type="submit">Отправить</button>
+                        </form>
+                    </div>
+                    <div class="footer-contacts">
+                        <div class="footer-contacts__item">
+                            <p class="footer-contacts__title">Консультация специалиста</p>
+                            <a href="tel:+79871231234" class="footer-contacts__link">+7 (987) 123 12 34</a>
+                        </div>
+                        <div class="footer-contacts__item">
+                            <p class="footer-contacts__title">Вопросы и предложения</p>
+                            <a href="mailto:info@kvm-sistem.ru" class="footer-contacts__link">info@kvm-sistem.ru</a>
+                        </div>
+                        <div class="footer-contacts__item">
+                            <p class="footer-contacts__title">Напишите нам</p>
+                            <ul>
+                                <li>
+                                    <a href="" class="footer-contacts__link">Telegram</a>
+                                </li>
+                                <li>
+                                    <a href="" class="footer-contacts__link">Whatsup</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span class="footer__copyright">Все права защищены</span>
+                <a href="#" class="footer__policy">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

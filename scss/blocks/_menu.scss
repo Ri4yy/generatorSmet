@@ -1,0 +1,10 @@
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    &__link {
+        font-size: 20px;
+        color: $accent-color;
+    }
+}

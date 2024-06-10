@@ -1,0 +1,93 @@
+@import url("../fonts/stylesheet.css");
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: $accent-color;
+    font-family: "Inter", sans-serif;
+    background-color: #ECECEC;
+}
+.container {
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__inner {
+        position: relative;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 1500px) {
+        padding: 0 10px;
+    }
+}
+
+
+h1 {
+    font-weight: 800;
+    font-size: 101px;
+    line-height: 94px;
+
+    & span {
+        color: $main-color;
+    }
+
+    @media(max-width: $breakpoint768) {
+        font-size: 62px;
+        line-height: 55px;
+    }
+    @media(max-width: $breakpoint480) {
+        font-size: 39px;
+        line-height: 35px;
+    }
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 40px;
+    text-transform: uppercase;
+
+    @media(max-width: $breakpoint768) {
+        font-size: 24px;
+    }
+    @media(max-width: $breakpoint480) {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+
+    @media(max-width: $breakpoint480) {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+}
+h4 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+}
+.section {
+    margin-top: 160px;
+
+    @media(max-width: $breakpoint1024) {
+        margin-top: 100px;
+    }
+    @media(max-width: $breakpoint768) {
+        margin-top: 80px;
+    }
+
+}
+.no-scroll {
+    overflow: hidden;
+}

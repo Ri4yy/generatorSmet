@@ -1,0 +1,36 @@
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__description {
+        display: flex;
+        gap: 26px;
+    }
+    &__img {
+        display: flex;
+        align-self: flex-end;
+        flex-shrink: 1;
+        border-radius: 50%;
+        max-width: 150px;
+        object-fit: cover;
+    }
+}
+
+.message {
+    max-width: 678px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 25px;
+    border-bottom-right-radius: 0px;
+
+    &__title {
+        color: #051756;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    &__description {
+        margin-top: 20px;
+        font-size: 18px;
+    }
+}

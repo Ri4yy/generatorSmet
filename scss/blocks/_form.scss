@@ -1,0 +1,16 @@
+.form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    padding: 15px 0 15px 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+
+    &::placeholder {
+        color: #fff;
+    }
+}
+
