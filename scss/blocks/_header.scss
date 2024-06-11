@@ -1,7 +1,13 @@
 .header {
+    position: relative;
     
     &__wrapper {
-        margin-top: 50px;
+        padding-top: 50px;
+
+        @media(max-width: $breakpoint1024) {
+            padding-top: 20px;
+            justify-content: unset;
+        }
 
         display: flex;
         justify-content: space-between;
@@ -11,5 +17,23 @@
         display: flex;
         align-items: center;
         gap: 20px;
+
+        @media(max-width: $breakpoint1280) {
+            gap: 12px;
+        }
+        @media(max-width: $breakpoint1024) {
+            margin-left: auto;
+        }
+        @media(max-width: $breakpoint480) {
+            display: none;
+        }
+    }
+}
+
+.logo {
+    display: flex;
+
+    @media(max-width: $breakpoint1024) {
+        max-width: 140px;
     }
 }

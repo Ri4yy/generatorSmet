@@ -9,20 +9,60 @@
 
     &--signIn {
         padding: 14px 59px;
+
+        @media(max-width: $breakpoint1280) {
+            padding: 9px 20px;
+        }
+        
     }
     &--signUp {
         padding: 14px 52px;
+
+        @media(max-width: $breakpoint1280) {
+            padding: 9px 32px;
+        }
+        @media(max-width: $breakpoint1024) {
+            padding: 9px 20px;
+        }
+    }
+    &--hero {
+        margin-top: 55px;
+        padding: 19px;
+        max-width: 360px;
+        width: 100%;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 20px;
+            padding: 9px 20px;
+            width: fit-content;
+        }
+        @media(max-width: $breakpoint480) {
+            width: 100%;
+            max-width: none;
+        }
     }
     &--try {
         padding: 19px;
         max-width: 486px;
         width: 100%;
+
+        @media(max-width: $breakpoint768) {
+            max-width: 354px;
+        }
+        @media(max-width: $breakpoint480) {
+            padding: 9px;
+        }
     }
     &--form {
         margin-top: 40px;
         padding: 19px;
         width: 100%;
         border-radius: 0;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 20px;
+            padding: 10px;
+        }
     }
     &--yellow {
         border-color: $main-color;

@@ -3,34 +3,90 @@
     justify-content: space-between;
     align-items: center;
 
+    @media(max-width: $breakpoint1024) {
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+    }
+    @media(max-width: $breakpoint480) {
+        gap: 20px;
+    }
+
     &__description {
         display: flex;
         gap: 26px;
+
+        @media(max-width: $breakpoint480) {
+            gap: 35px;
+        }
     }
     &__img {
         display: flex;
         align-self: flex-end;
         flex-shrink: 1;
+        max-width: 100px;
         border-radius: 50%;
-        max-width: 150px;
         object-fit: cover;
+
+        @media(max-width: $breakpoint480) {
+            max-width: 40px;
+        }
+
+        &--big {
+            max-width: 150px;
+
+            @media(max-width: $breakpoint768) {
+                max-width: 100px;
+            }
+    
+            @media(max-width: $breakpoint480) {
+                max-width: 40px;
+            }
+        }
     }
 }
 
 .message {
+    position: relative;
     max-width: 678px;
     background-color: #fff;
     padding: 40px;
-    border-radius: 25px;
-    border-bottom-right-radius: 0px;
+    border-radius: 25px 25px 0 25px;
+    box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.13);
+
+    @media(max-width: $breakpoint768) {
+        padding: 20px;
+    }
+
+    @media(max-width: $breakpoint1024) {
+        max-width: unset;
+    }
+
+    &::after {
+        position: absolute;
+        content: url('../img/angle.png');
+        right: -44px;
+        bottom: -4px;
+    }
 
     &__title {
         color: #051756;
         font-size: 18px;
         font-weight: 600;
+
+        @media(max-width: $breakpoint480) {
+            font-size: 16px;
+        }
     }
     &__description {
         margin-top: 20px;
         font-size: 18px;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 4px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 14px;
+        }
     }
 }

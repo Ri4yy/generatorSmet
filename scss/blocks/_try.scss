@@ -1,10 +1,18 @@
 .try {
     padding: 196px 0 214px 0;
     background-color: $accent-color;
-    background-image: url('');
+    background-image: url('../img/bg-try.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    @media(max-width: $breakpoint768) {
+        padding: 118px 0 130px 0;
+    }
+    @media(max-width: $breakpoint480) {
+        padding-top: 86px;
+        background-position: 40% 50%;
+    }
 
     &__wrapper {
         display: flex;
@@ -12,11 +20,30 @@
         align-items: center;
         gap: 46px;
         color: #fff;
+
+        @media(max-width: $breakpoint768) {
+            gap: 40px;
+        }
+        @media(max-width: $breakpoint480) {
+            gap: 94px;
+        }
     }
     &__title {
         font-size: 101px;
-        line-height: 90px;
+        line-height: 90%;
+        letter-spacing: -0.04em;
         font-weight: 800;
         text-align: center;
+
+        @media(max-width: $breakpoint1024) {
+            font-size: 90px;
+        }
+        @media(max-width: $breakpoint768) {
+            font-size: 56px;
+            letter-spacing: -0.03em;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 36px;
+        }
     }
 }

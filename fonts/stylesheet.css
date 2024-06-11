@@ -1,9 +1,8 @@
 @font-face {
     font-family: 'Inter';
-    src: url('Inter.eot');
-    src: local('Inter'),
-        url('Inter.eot?#iefix') format('embedded-opentype'),
-        url('Inter.ttf') format('truetype');
+    src: url('Inter-Regular.ttf');
+    src: local('Inter Regular'),
+        url('Inter-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -11,7 +10,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-ExtraBold.eot');
+    src: url('Inter-ExtraBold.ttf');
     src: local('Inter ExtraBold'), local('Inter-ExtraBold'),
         url('Inter-ExtraBold.eot?#iefix') format('embedded-opentype'),
         url('Inter-ExtraBold.ttf') format('truetype');
@@ -22,7 +21,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Bold.eot');
+    src: url('Inter-Bold.ttf');
     src: local('Inter Bold'), local('Inter-Bold'),
         url('Inter-Bold.eot?#iefix') format('embedded-opentype'),
         url('Inter-Bold.ttf') format('truetype');
@@ -33,7 +32,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-Medium.eot');
+    src: url('Inter-Medium.ttf');
     src: local('Inter Medium'), local('Inter-Medium'),
         url('Inter-Medium.eot?#iefix') format('embedded-opentype'),
         url('Inter-Medium.ttf') format('truetype');
@@ -44,7 +43,7 @@
 
 @font-face {
     font-family: 'Inter';
-    src: url('Inter-SemiBold.eot');
+    src: url('Inter-SemiBold.ttf');
     src: local('Inter SemiBold'), local('Inter-SemiBold'),
         url('Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
         url('Inter-SemiBold.ttf') format('truetype');

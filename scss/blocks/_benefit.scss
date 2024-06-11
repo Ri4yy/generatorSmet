@@ -3,13 +3,27 @@
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     counter-reset: benefit;
 
+    @media(max-width: $breakpoint768) {
+        gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        justify-items: center;
+    }
+
     &__item {
         display: flex;
         flex-direction: column;
         position: relative;
         padding: 20px;
-        height: 730px;
+        min-height: 750px;
         border: 1px solid #CACACA;
+
+        @media(max-width: $breakpoint768) {
+            background-color: #fff;
+            padding: 15px;
+            border: none;
+            min-height: auto;
+            max-width: 350px;
+        }
 
         &::before {
             position: absolute;
@@ -22,39 +36,69 @@
             left: 50%;
             translate: -50% 0;
             
+            @media(max-width: $breakpoint768) {
+                content: '';
+            }
         }
-        &:hover {
-            background-color: $secondary-color;
 
-            & .benefit__hidden {
-                // opacity: 1;
-                display: flex;
-                flex-direction: column;
+        @media(hover: hover) {
+            &:hover {
+                background-color: $secondary-color;
+    
+                & .benefit__hidden {
+                    display: flex;
+                    flex-direction: column;
+                }
+                & .benefit__bottom {
+                    display: none;
+                }
+                &::before {
+                    -webkit-text-stroke: 1px white;
+                    color: transparent;
+                }
             }
-            & .benefit__bottom {
-                display: none;
-            }
-            &::before {
-                -webkit-text-stroke: 1px white;
-                color: transparent;
-            }
-
-
         }
     }
     &__hidden {
-        // opacity: 0;
+        position: relative;
+        height: 100%;
         display: none;
+
+        @media(max-width: $breakpoint768) {
+            display: contents;
+        }
+
+        & .benefit__icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+            @media(max-width: $breakpoint768) {
+                display: none;
+            }
+        }
     }
     &__img {
         display: flex;
         aspect-ratio: 9/16;
-        height: 507px;
+        max-height: 507px;
         object-fit: cover;
+
+        @media(max-width: $breakpoint768) {
+            max-height: 280px;
+            object-position: 50% 0;
+        }
     }
     &__description {
         margin-top: 20px;
         display: flex;
+        padding-right: 24px;
+
+        @media(max-width: $breakpoint768) {
+            padding-right: 0;
+            margin-top: 10px;
+            flex-direction: column;
+        }
     }
     &__icon {
         display: flex;
@@ -65,11 +109,25 @@
     }
     &__text {
         color: #fff;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 9;
+        overflow: hidden;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 10px;
+            color: $accent-color;
+            letter-spacing: -0.03em;
+        }
     }
     &__bottom {
         display: flex;
         justify-content: space-between;
         margin-block-start: auto;
+
+        @media(max-width: $breakpoint768) {
+            display: none;
+        }
     }
     &__title {
         font-size: 22px;

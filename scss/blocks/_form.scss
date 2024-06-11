@@ -2,12 +2,23 @@
     margin-top: 20px;
     display: flex;
     flex-direction: column;
+
+    @media(max-width: $breakpoint768) {
+        margin-top: 40px;
+    }
+    @media(max-width: $breakpoint480) {
+        margin-top: 20px;
+    }
 }
 
 .input {
     padding: 15px 0 15px 0;
     border-bottom: 1px solid #fff;
     color: #fff;
+
+    @media(max-width: $breakpoint768) {
+        padding: 10px 0 10px 0;
+    }
 
     &::placeholder {
         color: #fff;

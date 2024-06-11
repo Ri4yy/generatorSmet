@@ -5,39 +5,87 @@
     border-top-right-radius: 30px;
     padding: 100px 0 20px 0;
 
+    @media(max-width: $breakpoint1024) {
+        margin-top: 120px;
+    }
+    @media(max-width: $breakpoint768) {
+        padding: 44px 0 20px 0;
+    }
+    @media(max-width: $breakpoint480) {
+        margin-top: 100px;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @media(max-width: $breakpoint768) {
+            flex-direction: column;
+        }
     }
 
     &__bottom {
         margin-top: 160px;
         display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
         justify-content: space-between;
         align-items: center;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 52px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 74px;
+        }
     }
     &__copyright {
         font-size: 20px;
         color: #fff;
+        @media(max-width: $breakpoint480) {
+            font-size: 12px;
+        }
     }
     &__policy {
         font-size: 20px;
         color: #fff;
+        @media(max-width: $breakpoint480) {
+            font-size: 12px;
+        }
     }
 }
 
 .footer-form {
     width: 50%;
 
+    @media(max-width: $breakpoint768) {
+        width: 100%;
+    }
+
     &__title {
         font-size: 40px;
         font-weight: 500;
         color: #fff;
+
+        @media(max-width: $breakpoint768) {
+            font-size: 24px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 20px;
+        }
     }
     &__subtitle {
         margin-top: 40px;
         font-size: 18px;
         color: #fff;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 36px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 20px;
+            font-size: 16px;
+        }
     }
 
 }

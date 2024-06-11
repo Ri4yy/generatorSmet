@@ -1,0 +1,164 @@
+.hero {
+    margin-top: 110px;
+    padding-bottom: 40px;
+    background-image: url('../img/bg-hero.png');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: cover;
+
+    @media(max-width: $breakpoint768) {
+        margin-top: 60px;
+        background-image: url('../img/bg-hero768.png');
+        background-position: 50% -20%;
+        background-size: auto;
+    }
+    @media(max-width: $breakpoint480) {
+        margin-top: 34px;
+        background-image: url('../img/bg-hero480.png');
+        background-position: 50% -80%;
+    }
+    @media(max-width: $breakpoint360) {
+        background-position: 50% -35%;
+    }
+
+    &__wrapper {
+
+    }
+    &__top {
+        padding-bottom: 270px;
+        position: relative;
+
+        @media(max-width: $breakpoint768) {
+            padding-bottom: 390px;
+        }
+        @media(max-width: $breakpoint480) {
+            padding-bottom: 100px;
+        }
+    }
+    &__title {
+        position: relative;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        z-index: 2;
+
+        @media(max-width: $breakpoint1024) {
+            font-size: 90px;
+        }
+        @media(max-width: $breakpoint768) {
+            font-size: 62px;
+        }
+        @media(max-width: $breakpoint660) {
+            font-size: 55px;
+        }
+        @media(max-width: $breakpoint480) {
+            font-size: 39px;
+        }
+        @media(max-width: $breakpoint360) {
+            font-size: 34px;
+        }
+    }
+    &__text {
+        position: relative;
+        max-width: 570px;
+        margin-top: 40px;
+        font-size: 24px;
+        z-index: 2;
+
+        @media(max-width: $breakpoint768) {
+            margin-top: 20px;
+        }
+        @media(max-width: $breakpoint480) {
+            margin-top: 60px;
+            font-size: 18px;
+        }
+    }
+    &__img {
+        position: absolute;
+        right: 0;
+        bottom: 24px;
+
+        @media(max-width: $breakpoint1500) {
+            max-height: 540px;
+        }
+        @media(max-width: $breakpoint1024) {
+            max-height: 440px;
+        }
+        @media(max-width: $breakpoint768) {
+            max-height: 368px;
+            right: 120px;
+            bottom: 60px;
+        }
+        @media(max-width: $breakpoint660) {
+            right: 0;
+        }
+        @media(max-width: $breakpoint480) {
+            max-height: 156px;
+            top: 0;
+        }
+    }
+}
+
+
+.hero-message {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+
+    @media(max-width: $breakpoint480) {
+        gap: 36px;
+    }
+
+    &__wrapper {
+        position: relative;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 25px 25px 25px 0;
+        box-shadow: 0 0 9px 0 rgba(0, 0, 0, 0.13);
+        max-width: 614px;
+
+        @media(max-width: $breakpoint768) {
+            padding: 20px;
+            max-width: 574px;
+        }
+        @media(max-width: $breakpoint480) {
+            padding: 15px;
+        }
+
+        &::before {
+            position: absolute;
+            content: url('../img/angle.png');
+            left: -44px;
+            bottom: -4px;
+            transform: scale(-1,1);
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+
+        @media(max-width: $breakpoint480) {
+            font-size: 16px;
+        }
+    }
+    &__text {
+        margin-top: 16px;
+        font-size: 18px;
+
+        @media(max-width: $breakpoint480) {
+            margin-top: 4px;
+            font-size: 14px;
+        }
+    }
+    &__img {
+        display: flex;
+        align-self: flex-end;
+        flex-shrink: 1;
+        max-width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+
+        @media(max-width: $breakpoint480) {
+            max-width: 40px;
+        }
+    }
+}

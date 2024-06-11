@@ -1,11 +1,40 @@
 .functional {
     display: flex;
     gap: 270px;
+
+    @media(max-width: $breakpoint768) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
     
     &__img {
         display: flex;
-        width: 487px;
-        height: 500px;
+        height: fit-content;
+
+        @media(max-width: $breakpoint1024) {
+            max-width: 360px;
+        }
+        @media(max-width: $breakpoint768) {
+            order: 2;
+            align-self: flex-start;
+            margin-left: calc(100% - 496px);
+        }
+        @media(max-width: 526px) {
+            margin-left: 0;
+        }
+        @media(max-width: $breakpoint480) {
+            width: 100%;
+        }
+    }
+
+    @media(max-width: $breakpoint1280) {
+        gap: 160px;
+    }
+    @media(max-width: $breakpoint1024) {
+        gap: 80px;
+    }
+    @media(max-width: $breakpoint768) {
+        gap: 20px;
     }
 }
 
@@ -14,11 +43,19 @@
     display: flex;
     flex-direction: column;
 
+    @media(max-width: $breakpoint768) {
+        order: 1;
+    }
+
     &__item {
         padding: 20px;
         min-height: 120px;
         font-size: 18px;
         border-top: 1px solid $accent-color; 
+
+        @media(max-width: $breakpoint480) {
+            font-size: 14px;
+        }
 
         &:last-child {
             border-bottom: 1px solid $accent-color;
