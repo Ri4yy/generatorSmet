@@ -38,21 +38,19 @@ document.addEventListener('DOMContentLoaded', () => {
         return urlParams.get(name);
     }
     
-    // Получаем значение параметра 'token'
     const token = getUrlParameter('token');
+
     console.log(token)
     
     if (token) {
-        // Создаем тело запроса
         const requestBody = {
             token: token
         };
     
-        // Отправляем POST-запрос к API
         fetch('https://m2-kvm.ru/api/adverlogs/', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                "Content-type": "application/json; charset=UTF-8"
             },
             body: JSON.stringify(requestBody)
         })
