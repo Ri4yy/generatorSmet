@@ -47,12 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
             token: token
         };
     
-        fetch('https://app.genks.ru/api/adverlogs', {
+        fetch('https://m2-kvm.ru/api/adverlogs', {
             method: 'POST',
             headers: {
                 "Content-type": "application/json"
             },
-            mode: 'no-cors',
+            // mode: 'no-cors',
             body: JSON.stringify(requestBody)
         })
         .then(response => response.json())
