@@ -25,11 +25,44 @@ document.addEventListener('DOMContentLoaded', () => {
     let accordionItem = document.querySelectorAll('.accordion__item'),
         accordionBtn = document.querySelectorAll('.accordion__btn')
 
-        accordionBtn.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                btn.closest('.accordion__item').classList.toggle('open')
-                
-            })
+    accordionBtn.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            btn.closest('.accordion__item').classList.toggle('open')
+            
         })
+    })
+
+
+    function getUrlParameter(name) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(name);
+    }
+    
+    // Получаем значение параметра 'token'
+    const token = getUrlParameter('token');
+    console.log(token)
+    
+    if (token) {
+        // Создаем тело запроса
+        const requestBody = {
+            token: token
+        };
+    
+        // Отправляем POST-запрос к API
+        fetch('https://m2-kvm.ru/api/adverlogs/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Успешный ответ:', data);
+        })
+        .catch(error => {
+            console.error('Ошибка:', error);
+        });
+    }
         
 })
