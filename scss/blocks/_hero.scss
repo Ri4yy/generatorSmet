@@ -8,22 +8,19 @@
 
     @media(max-width: $breakpoint768) {
         margin-top: 60px;
-        background-image: url('../img/bg-hero768.png');
+        background-image: url('../img/bg-hero768.svg');
         background-position: 50% -20%;
         background-size: auto;
     }
     @media(max-width: $breakpoint480) {
         margin-top: 34px;
-        background-image: url('../img/bg-hero480.png');
+        background-image: url('../img/bg-hero480.svg');
         background-position: 50% -80%;
     }
     @media(max-width: $breakpoint360) {
         background-position: 50% -35%;
     }
 
-    &__wrapper {
-
-    }
     &__top {
         padding-bottom: 270px;
         position: relative;

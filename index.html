@@ -15,10 +15,10 @@
                 </a>
                 <nav>
                     <ul class="menu">
-                        <li class="menu__item"><a href="" class="menu__link">В разработке</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Возможности</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Кому полезен сервис</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                        <li class="menu__item"><a href="#functional" class="menu__link">В разработке</a></li>
+                        <li class="menu__item"><a href="#possibilities" class="menu__link">Возможности</a></li>
+                        <li class="menu__item"><a href="#benefit" class="menu__link">Кому полезен сервис</a></li>
+                        <li class="menu__item"><a href="#contacts" class="menu__link">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="mobile-menu ">
@@ -31,10 +31,10 @@
                         </button>
                     </div>
                     <ul class="mobile-menu-list">
-                        <li class="mobile-menu-list__item"><a href="" class="mobile-menu-list__link">В разработке</a></li>
-                        <li class="mobile-menu-list__item"><a href="" class="mobile-menu-list__link">Возможности</a></li>
-                        <li class="mobile-menu-list__item"><a href="" class="mobile-menu-list__link">Кому полезен сервис</a></li>
-                        <li class="mobile-menu-list__item"><a href="" class="mobile-menu-list__link">Контакты</a></li>
+                        <li class="mobile-menu-list__item"><a href="#functional" class="mobile-menu-list__link">В разработке</a></li>
+                        <li class="mobile-menu-list__item"><a href="#possibilities" class="mobile-menu-list__link">Возможности</a></li>
+                        <li class="mobile-menu-list__item"><a href="#benefit" class="mobile-menu-list__link">Кому полезен сервис</a></li>
+                        <li class="mobile-menu-list__item"><a href="#contacts" class="mobile-menu-list__link">Контакты</a></li>
                     </ul>
                     <a href="mailto:info@kvm-sistem.ru" class="mobile-menu__link">info@kvm-sistem.ru</a>
                 </div>
@@ -74,7 +74,7 @@
         </section>
 
         <!-- возможности -->
-        <!-- <section class="section">
+        <section class="section" id="possibilities">
             <div class="container">
                 <div class="top">
                     <h2>Возможности</h2>
@@ -87,12 +87,14 @@
                     </div>
                 </div>
                 <div class="container__inner">
-                    <div class="possibilities">
-                        <div class="possibilities__item ">
-                            <div class="possibilities__top">
+                    <div class="possibilities accordion">
+                        <div class="possibilities__item accordion__item">
+                            <div class="possibilities__top accordion__btn">
+                                <span class="possibilities__counter">01.</span>
                                 <p class="possibilities__title">Различные способы составления смет</p>
+                                <button class="possibilities__btn"></button>
                             </div>
-                            <div class="possibilities__description">
+                            <div class="possibilities__description accordion__body">
                                 <ul class="possibilities-list">
                                     <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
                                     <li>График работ поможет удобно выставить сроки заказа.</li>
@@ -100,15 +102,17 @@
                                 </ul>
                             </div>
                             <div class="possibilities__bottom">
-                                <img src="" alt="">
+                                <img src="./img/plus.svg" class="possibilities__icon" alt="">
                                 <span class="possibilities__counter">01.</span>
                             </div>
                         </div>
-                        <div class="possibilities__item ">
-                            <div class="possibilities__top">
-                                <p class="possibilities__title">Все необходимые документы</p>
+                        <div class="possibilities__item accordion__item">
+                            <div class="possibilities__top accordion__btn">
+                                <span class="possibilities__counter">02.</span>
+                                <p class="possibilities__title">Все необходимые документы смет</p>
+                                <button class="possibilities__btn"></button>
                             </div>
-                            <div class="possibilities__description">
+                            <div class="possibilities__description accordion__body">
                                 <ul class="possibilities-list">
                                     <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
                                     <li>График работ поможет удобно выставить сроки заказа.</li>
@@ -116,15 +120,17 @@
                                 </ul>
                             </div>
                             <div class="possibilities__bottom">
-                                <img src="" alt="">
+                                <img src="./img/plus.svg" class="possibilities__icon" alt="">
                                 <span class="possibilities__counter">02.</span>
                             </div>
                         </div>
-                        <div class="possibilities__item ">
-                            <div class="possibilities__top">
-                                <p class="possibilities__title">ведение Объектов</p>
+                        <div class="possibilities__item accordion__item">
+                            <div class="possibilities__top accordion__btn">
+                                <span class="possibilities__counter">03.</span>
+                                <p class="possibilities__title">ведение Объектов смет</p>
+                                <button class="possibilities__btn"></button>
                             </div>
-                            <div class="possibilities__description">
+                            <div class="possibilities__description accordion__body">
                                 <ul class="possibilities-list">
                                     <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
                                     <li>График работ поможет удобно выставить сроки заказа.</li>
@@ -132,15 +138,17 @@
                                 </ul>
                             </div>
                             <div class="possibilities__bottom">
-                                <img src="" alt="">
+                                <img src="./img/plus.svg" class="possibilities__icon" alt="">
                                 <span class="possibilities__counter">03.</span>
                             </div>
                         </div>
-                        <div class="possibilities__item ">
-                            <div class="possibilities__top">
+                        <div class="possibilities__item accordion__item">
+                            <div class="possibilities__top accordion__btn">
+                                <span class="possibilities__counter">04.</span>
                                 <p class="possibilities__title">полезная Статистика</p>
+                                <button class="possibilities__btn"></button>
                             </div>
-                            <div class="possibilities__description">
+                            <div class="possibilities__description accordion__body">
                                 <ul class="possibilities-list">
                                     <li>Договор подряда создается автоматически вместе со сметой на каждый объект.</li>
                                     <li>График работ поможет удобно выставить сроки заказа.</li>
@@ -148,14 +156,14 @@
                                 </ul>
                             </div>
                             <div class="possibilities__bottom">
-                                <img src="" alt="">
+                                <img src="./img/plus.svg" class="possibilities__icon" alt="">
                                 <span class="possibilities__counter">04.</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- попробовать -->
         <section class="section">
             <div class="try">
@@ -168,7 +176,7 @@
             </div>
         </section>
         <!-- функционал -->
-        <section class="section">
+        <section class="section" id="functional">
             <div class="container">
                 <h2>Функционал для работы со сметами</h2>
                 <div class="container__inner">
@@ -193,7 +201,7 @@
             </div>
         </section>
         <!-- польза -->
-        <section class="section">
+        <section class="section" id="benefit">
             <div class="container">
                 <div class="top">
                     <h2>Кому полезен сервис</h2>
@@ -276,7 +284,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer__top">
                 <div class="footer__wrapper">

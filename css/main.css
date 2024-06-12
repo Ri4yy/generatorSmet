@@ -94,6 +94,7 @@ body {
   color: #242424;
   font-family: "Inter", sans-serif;
   background-color: #ECECEC;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -184,16 +185,16 @@ h4 {
 }
 
 .section {
-  margin-top: 160px;
+  padding-top: 160px;
 }
 @media (max-width: 1024px) {
   .section {
-    margin-top: 120px;
+    padding-top: 120px;
   }
 }
 @media (max-width: 480px) {
   .section {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 }
 
@@ -359,7 +360,7 @@ h4 {
   align-items: center;
   gap: 40px;
 }
-@media (max-width: 1280px) {
+@media (max-width: 1440px) {
   .menu {
     gap: 20px;
   }
@@ -455,7 +456,12 @@ h4 {
   border-width: 1px;
   border-style: solid;
   border-color: #242424;
+  transition: all 0.3s;
   font-size: 18px;
+}
+.btn:hover {
+  border-color: #575757;
+  color: #575757;
 }
 .btn--signIn {
   padding: 14px 59px;
@@ -528,6 +534,11 @@ h4 {
 .btn--yellow {
   border-color: #FFEE44;
   background-color: #FFEE44;
+  transition: background-color 0.3s;
+}
+.btn--yellow:hover {
+  border-color: #FFEE44;
+  background-color: #FFE249;
 }
 
 .try {
@@ -672,6 +683,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 @media (max-width: 1024px) {
   .top {
@@ -871,6 +883,14 @@ h4 {
   display: flex;
   padding-right: 24px;
 }
+.benefit__description .benefit__title {
+  display: none;
+}
+@media (max-width: 768px) {
+  .benefit__description .benefit__title {
+    display: flex;
+  }
+}
 @media (max-width: 768px) {
   .benefit__description {
     padding-right: 0;
@@ -1014,37 +1034,132 @@ h4 {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 390px);
 }
+@media (max-width: 1280px) {
+  .possibilities {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 320px);
+  }
+}
+@media (max-width: 768px) {
+  .possibilities {
+    grid-template-columns: 1fr;
+    grid-template-rows: unset;
+  }
+}
 .possibilities__item {
   display: flex;
   flex-direction: column;
   border: 1px solid #CACACA;
   padding: 20px;
 }
-.possibilities__item:hover {
-  background-color: #fff;
-  border-color: #fff;
+@media (max-width: 768px) {
+  .possibilities__item {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    padding: 15px 0;
+  }
 }
-.possibilities__item:hover .possibilities__description {
-  display: flex;
+@media (hover: hover) {
+  .possibilities__item:hover {
+    background-color: #fff;
+    border-color: #fff;
+  }
+  .possibilities__item:hover .possibilities__description {
+    display: flex;
+  }
+  .possibilities__item:hover .possibilities__icon {
+    transform: rotate(45deg);
+  }
+}
+.possibilities__item:last-child {
+  border-bottom: 1px solid #CACACA;
 }
 .possibilities__item:nth-of-type(2) {
   grid-row: 2/3;
   grid-column: 2/3;
 }
+@media (max-width: 1280px) {
+  .possibilities__item:nth-of-type(2) {
+    grid-row: unset;
+    grid-column: unset;
+  }
+}
 .possibilities__item:nth-of-type(3) {
   grid-column: 3/4;
+}
+@media (max-width: 1280px) {
+  .possibilities__item:nth-of-type(3) {
+    grid-column: unset;
+  }
 }
 .possibilities__item:nth-of-type(4) {
   grid-row: 2/3;
   grid-column: 4/5;
 }
+@media (max-width: 1280px) {
+  .possibilities__item:nth-of-type(4) {
+    grid-row: unset;
+    grid-column: unset;
+  }
+}
+.possibilities__item.open .possibilities__btn::after {
+  display: none;
+}
+.possibilities__item.open .possibilities__description {
+  grid-template-rows: 1fr;
+}
+.possibilities__item.open .possibilities__description .possibilities-list {
+  margin-top: 18px;
+}
+@media (max-width: 768px) {
+  .possibilities__top {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.possibilities__top .possibilities__counter {
+  display: none;
+}
+@media (max-width: 768px) {
+  .possibilities__top .possibilities__counter {
+    display: flex;
+  }
+}
 .possibilities__title {
   font-size: 22px;
   text-transform: uppercase;
+  letter-spacing: -0.03em;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  .possibilities__title {
+    width: 304px;
+  }
+}
+@media (max-width: 480px) {
+  .possibilities__title {
+    font-size: 16px;
+    max-width: 240px;
+  }
 }
 .possibilities__description {
   display: none;
+}
+@media (max-width: 768px) {
+  .possibilities__description {
+    max-width: 304px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    transition: grid-template-rows 0.3s ease;
+  }
+}
+@media (max-width: 480px) {
+  .possibilities__description {
+    max-width: 240px;
+  }
 }
 .possibilities__bottom {
   margin-block-start: auto;
@@ -1052,10 +1167,53 @@ h4 {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 768px) {
+  .possibilities__bottom {
+    display: none;
+  }
+}
 .possibilities__counter {
   font-size: 18px;
   font-weight: 500;
   color: #979797;
+}
+@media (max-width: 768px) {
+  .possibilities__counter {
+    width: 28px;
+  }
+}
+.possibilities__icon {
+  transition: all 0.3s;
+}
+.possibilities__btn {
+  position: relative;
+  display: none;
+  width: 14px;
+  height: 14px;
+}
+@media (max-width: 768px) {
+  .possibilities__btn {
+    display: flex;
+  }
+}
+.possibilities__btn::before, .possibilities__btn::after {
+  position: absolute;
+  content: "";
+  background-color: #979797;
+  border-radius: 2px;
+}
+.possibilities__btn::before {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 2px;
+}
+.possibilities__btn::after {
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 2px;
 }
 
 .possibilities-list {
@@ -1064,10 +1222,21 @@ h4 {
   flex-direction: column;
   gap: 4px;
 }
+@media (max-width: 768px) {
+  .possibilities-list {
+    min-height: 0;
+    margin-top: 0;
+  }
+}
 .possibilities-list li {
   position: relative;
   padding-left: 20px;
   font-weight: 500;
+}
+@media (max-width: 480px) {
+  .possibilities-list li {
+    font-size: 14px;
+  }
 }
 .possibilities-list li::before {
   position: absolute;
@@ -1091,7 +1260,7 @@ h4 {
 @media (max-width: 768px) {
   .hero {
     margin-top: 60px;
-    background-image: url("../img/bg-hero768.png");
+    background-image: url("../img/bg-hero768.svg");
     background-position: 50% -20%;
     background-size: auto;
   }
@@ -1099,7 +1268,7 @@ h4 {
 @media (max-width: 480px) {
   .hero {
     margin-top: 34px;
-    background-image: url("../img/bg-hero480.png");
+    background-image: url("../img/bg-hero480.svg");
     background-position: 50% -80%;
   }
 }

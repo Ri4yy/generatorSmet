@@ -4,6 +4,12 @@
     border-width: 1px;
     border-style: solid;
     border-color: $accent-color;
+    transition: all .3s;
+
+    &:hover {
+        border-color: $secondary-color;
+        color: $secondary-color;
+    }
 
     font-size: 18px;
 
@@ -67,5 +73,11 @@
     &--yellow {
         border-color: $main-color;
         background-color: $main-color;
+        transition: background-color .3s;
+
+        &:hover {
+            border-color: $main-color;
+            background-color: #FFE249;
+        }
     }
 }

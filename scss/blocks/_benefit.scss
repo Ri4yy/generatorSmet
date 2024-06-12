@@ -94,6 +94,14 @@
         display: flex;
         padding-right: 24px;
 
+        & .benefit__title {
+            display: none;
+
+            @media(max-width: $breakpoint768) {
+                display: flex;
+            }
+        }
+
         @media(max-width: $breakpoint768) {
             padding-right: 0;
             margin-top: 10px;
