@@ -43,17 +43,21 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(token)
     
     if (token) {
-        const requestBody = {
-            token: token
-        };
+        // const requestBody = {
+        //     token: token
+        // };
     
-        fetch('https://app.genks.ru/api/adverlogs', {
+        fetch('https://app.genks.ru/api/adverlogs/', {
             method: 'POST',
+            body: JSON.stringify({
+                token: token,
+            }),
             headers: {
                 "Content-type": "application/json"
             },
             // mode: 'no-cors',
-            body: JSON.stringify(requestBody)
+            // body: JSON.stringify(requestBody)
+            
         })
         .then(response => response.json())
         .then(data => {
