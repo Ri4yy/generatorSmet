@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             token: token
         };
     
-        fetch('https://m2-kvm.ru/api/adverlogs', {
+        fetch('https://app.genks.ru/api/adverlogs', {
             method: 'POST',
             headers: {
                 "Content-type": "application/json"
