@@ -812,6 +812,16 @@ h4 {
     max-width: 350px;
   }
 }
+.benefit__item svg {
+  position: absolute;
+  z-index: 10;
+  content: "";
+  font-size: 313px;
+  color: #575757;
+  top: 175px;
+  left: 50%;
+  translate: -50% 0;
+}
 .benefit__item::before {
   position: absolute;
   z-index: 10;
@@ -839,9 +849,18 @@ h4 {
   .benefit__item:hover .benefit__bottom {
     display: none;
   }
-  .benefit__item:hover::before {
+  .benefit__item:hover:not(:last-child)::before {
     -webkit-text-stroke: 1px white;
     color: transparent;
+  }
+  .benefit__item:hover:last-child::before {
+    opacity: 0;
+  }
+  .benefit__item:hover svg > #fillInside {
+    fill: transparent;
+  }
+  .benefit__item:hover svg > #fillOutside {
+    fill: #fff;
   }
 }
 .benefit__hidden {

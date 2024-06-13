@@ -24,6 +24,17 @@
             min-height: auto;
             max-width: 350px;
         }
+        & svg {
+            position: absolute;
+            z-index: 10;
+            content: "";
+            font-size: 313px;
+            color: $secondary-color;
+            top: 175px;
+            left: 50%;
+            translate: -50% 0;
+        }
+
 
         &::before {
             position: absolute;
@@ -52,9 +63,20 @@
                 & .benefit__bottom {
                     display: none;
                 }
-                &::before {
+                &:not(:last-child)::before {
                     -webkit-text-stroke: 1px white;
                     color: transparent;
+                }
+                &:last-child::before {
+                    opacity: 0;
+                }
+                & svg {
+                    & > #fillInside {
+                        fill: transparent;
+                    }
+                    & > #fillOutside {
+                        fill: #fff;
+                    }
                 }
             }
         }
