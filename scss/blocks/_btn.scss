@@ -32,6 +32,8 @@
         }
     }
     &--hero {
+        display: flex;
+        justify-content: center;
         margin-top: 55px;
         padding: 19px;
         max-width: 360px;
@@ -48,6 +50,8 @@
         }
     }
     &--try {
+        display: flex;
+        justify-content: center;
         padding: 19px;
         max-width: 486px;
         width: 100%;
