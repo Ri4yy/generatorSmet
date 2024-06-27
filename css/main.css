@@ -836,6 +836,7 @@ h4 {
   top: 100px;
   left: 50%;
   translate: -50% 0;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   .benefit__item::before {
@@ -871,6 +872,7 @@ h4 {
   position: relative;
   height: 100%;
   display: none;
+  pointer-events: none;
 }
 @media (max-width: 768px) {
   .benefit__hidden {
